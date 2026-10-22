@@ -1,24 +1,24 @@
 public class Circle {
-    private Point c;
-    private int r;
+    private Point center;
+    private int radius;
 
 
-    public Circle(Point center, int radius){
-        c = center;
-        r = radius;
+    public Circle(Point c, int r){
+        center = c;
+        radius = r;
 
     }
 // I added extra method getCenter for fun
     public String getCenter(){
-        return (c.getX() + ", " + c.getY());
+        return (center.getX() + ", " + center.getY());
     }
     
 
     public int getRadius(){
-        return r;
+        return radius;
     }
 
     public double getArea(){
-        return MathTools.round((Math.PI)*(Math.pow(r,  2)), 2);
+        return MathTools.round((Math.PI)*(Math.pow(radius,  2)), 2);
     }
 }

@@ -5,7 +5,8 @@ public class MathTools {
     }
 
     public static double round(double num, int places) {
-        return (int)((num * (Math.pow(10,places)))+0.5)/Math.pow(10,places);
+        double factor = Math.pow(10,places);
+        return (int)(Math.floor(num * factor + 0.5))/factor; //Using floor prevents errors in negative rounding
     }
     public static double distance(Point a, Point b) {
         double xDiff = (a.getX())-(b.getX());
@@ -15,6 +16,9 @@ public class MathTools {
     public static double slope(Point a, Point b) {
         double xDiff = (a.getX())-(b.getX());
         double yDiff = (a.getY())-(b.getY());
+        if (xDiff == 0) {
+            return Double.POSITIVE_INFINITY;
+        }
         return MathTools.round(yDiff/xDiff, 2);
     }
 }
