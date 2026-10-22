@@ -4,6 +4,8 @@ public class App {
 
         Point a = new Point(MathTools.randInt(1,100), MathTools.randInt(1,100));
         Point b = new Point(MathTools.randInt(1,100), MathTools.randInt(1,100));
+        Point c = new Point(MathTools.randInt(1,100), MathTools.randInt(1,100));
+
 
         // Commit 1 printing: 
         System.out.println("\nCommit 1 printing... \n");
@@ -27,5 +29,13 @@ public class App {
         System.out.println("Length: " + rect.getLength());
         System.out.println("Width: " + rect.getWidth());
         System.out.println("Area of Rectangle: " + rect.getArea());
+
+        // Commit 4 printing: 
+        System.out.println("\nCommit 4 printing... \n");
+        Triangle tri = new Triangle(a, b, c);
+        System.out.println("Vertex 1: " + a.getX() + ", " + a.getY());
+        System.out.println("Vertex 2: " + b.getX() + ", " + b.getY());
+        System.out.println("Vertex 3: " + c.getX() + ", " + c.getY());
+        System.out.println("Area of triangle: " + tri.getArea());
     }
 }

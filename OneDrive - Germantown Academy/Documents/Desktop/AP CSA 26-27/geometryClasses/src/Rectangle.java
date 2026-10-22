@@ -10,7 +10,7 @@ public class Rectangle {
         width = w; 
     }
 
-    //Included getLen and getWid for debugging/grading purposes, so you can see if getArea is producing correct values
+    //Included getLength and getWidth for debugging/grading purposes, so you can see if getArea is producing correct values
     public double getArea(){
         return MathTools.round(width * length, 2);
     }
