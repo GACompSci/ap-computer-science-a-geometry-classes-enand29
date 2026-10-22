@@ -15,7 +15,7 @@ public class MathTools {
     public static double slope(Point a, Point b) {
         double xDiff = (a.getX())-(b.getX());
         double yDiff = (a.getY())-(b.getY());
-        return yDiff/xDiff;
+        return MathTools.round(yDiff/xDiff, 2);
     }
 }
 
